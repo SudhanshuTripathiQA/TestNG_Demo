@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="com.scc.qa.report.ExtentReporterNG"/>
+    <listener class-name="com.scc.qa.analyzer.MyTransformer"/>
+  </listeners>
+  <test thread-count="5" name="FeatureTestByPomDemo(failed)">
+    <parameter name="typeOfLogin" value="standard"/>
+    <parameter name="loginApproach" value="normalLogin"/>
+    <parameter name="serverName" value="Gen"/>
+    <classes>
+      <class name="com.scc.qa.testcases.LoginPageTest">
+        <methods>
+          <include name="verifyErrorMessageWithoutCredentialTest"/>
+          <include name="tearDown"/>
+          <include name="verifyErrorMessageWithoutPasswordTest"/>
+          <include name="setUp"/>
+          <include name="verifyErrorMessageWithoutUsernameTest"/>
+        </methods>
+      </class> <!-- com.scc.qa.testcases.LoginPageTest -->
+    </classes>
+  </test> <!-- FeatureTestByPomDemo(failed) -->
+</suite> <!-- Failed suite [Suite] -->
